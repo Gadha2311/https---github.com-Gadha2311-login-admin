@@ -1,0 +1,30 @@
+<%-include('header')-%>
+<body>
+    <div class="container">
+        <h2>ADMIN LOGIN</h2>
+        <form action="/admin/adminlogin" method="post">
+        
+            <label for="username">username:</label>
+            <input type="text" id="username" name="username" required placeholder="enter your name">
+            <%if(locals.unerror){%>
+                <div class="alter alert-success text-center">
+                    <%=unerror %>
+                </div>
+                <%}%>
+    
+            
+
+            <label for="password">password:</label>
+            <input type="password" id="password" name="password" required placeholder="enter password">
+
+            <%if(locals.perror){%>
+                <div class="alter alert-success text-center">
+                    <%=perror %>
+                </div>
+                <%}%>
+            
+            <button>submit</button>
+    </div>
+    </style>
+
+<%-include('footer')-%>
